@@ -1,6 +1,7 @@
 import React from "react";
 
-const Card = ({title,price,image,addToCart}) => {
+const Card = ({title,price,image,addtoCart}) => {
+
   return (
     <div className="w-[20rem]  rounded overflow-hidden shadow-lg bg-white m-5 ">
       <img
@@ -19,7 +20,7 @@ const Card = ({title,price,image,addToCart}) => {
           View Detail
         </button>
         
-        <button className="bg-blue-500 text-white font-bold py-2 px-4 gap-5 rounded hover:bg-blue-700"  onClick={addToCart}>
+        <button className="bg-blue-500 text-white font-bold py-2 px-4 gap-5 rounded hover:bg-blue-700" onClick={addtoCart} >
           Add To Cart
         </button>
       </div>
