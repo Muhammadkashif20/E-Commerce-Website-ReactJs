@@ -63,6 +63,11 @@ console.log(cart);
         title={data.title}
         price={data.price}
         image={data.images[0]}
+        showRemovefromCart={showCartItem===true}
+        removeCarts={()=>{
+          const allProducts=cart.filter((product)=>product.id !==data.id)
+          setCart([...allProducts])
+        }}
 /> 
 
 )  

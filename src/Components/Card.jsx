@@ -1,6 +1,6 @@
 import React from "react";
 
-const Card = ({title,price,image,addtoCart}) => {
+const Card = ({title,price,image,addtoCart,showRemovefromCart,removeCarts }) => {
 
   return (
     <div className="w-[20rem]  rounded overflow-hidden shadow-lg bg-white m-5 ">
@@ -19,10 +19,15 @@ const Card = ({title,price,image,addtoCart}) => {
         <button className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">
           View Detail
         </button>
-        
         <button className="bg-blue-500 text-white font-bold py-2 px-4 gap-5 rounded hover:bg-blue-700" onClick={addtoCart} >
           Add To Cart
         </button>
+        {showRemovefromCart &&
+      
+        <button className="bg-blue-500 text-white font-bold py-2 px-4 gap-5 rounded hover:bg-blue-700" onClick={removeCarts}>
+         Remove Item
+        </button>
+        }
       </div>
     </div>
   );
