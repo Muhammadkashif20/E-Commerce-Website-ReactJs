@@ -17,7 +17,7 @@ const App = () => {
   useEffect(()=>{
     const previousCarts= JSON.parse(localStorage.getItem('cart'))
     console.log('previousCarts=>',previousCarts);
-    setCart([...previousCarts] )
+    setCart([previousCarts] )
 
   },[])
   useEffect(()=>{
